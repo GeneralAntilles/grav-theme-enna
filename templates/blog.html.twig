@@ -1,0 +1,32 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set collection = page.collection() %}
+{% set base_url = page.url %}
+{% set feed_url = base_url %}
+
+{% if base_url == '/' %}
+    {% set base_url = '' %}
+{% endif %}
+
+{% if base_url == base_url_relative %}
+    {% set feed_url = base_url~'/'~page.slug %}
+{% endif  %}
+
+{% block sidebar %}
+<div class="sidebar">
+	<h3>Recent posts</h3>
+	<ul class="blog-post-list">
+		{% for child in collection %}
+		{% include 'partials/blog_list_item.html.twig' with {'page':child} %}
+		{% endfor %}
+	</ul>
+</div>
+{% endblock sidebar %}
+
+{% block content %}
+<div class="blog-posts">
+    {% for child in collection %}
+        {% include 'partials/blog_summary_item.html.twig' with {'page':child} %}
+    {% endfor %}
+</div>
+{% endblock content %}

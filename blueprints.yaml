@@ -1,0 +1,17 @@
+name: Enna
+version: 0.3
+description: "Slightly retro, responsive theme for Grav. Built for ryan.abel.space"
+icon: 
+author:
+  name: Ryan Abel
+  email: ryan@abel.space
+  url: http://ryan.abel.space/
+homepage: https://github.com/GeneralAntilles/grav-theme-enna
+demo: 
+keywords: enna, theme, responsive
+bugs: https://github.com/GeneralAntilles/grav-theme-enna/issues
+license: MIT
+
+form:
+  validation: strict
+  fields:

@@ -1,0 +1,27 @@
+<article class="blog-post">
+    <header>
+        <h1 class="blog-title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+
+        <time datetime="{{ page.date|date('Y\-m\-d H\:iP') }}" class="blog-date">
+            <span class="blog-day">{{ page.date|date("d") }}</span>
+            <em class="blog-month">{{ page.date|date("M") }}</em><br/>
+            <span class="blog-year">{{ page.date|date("Y") }}</span>
+        </time>
+
+        {% if page.taxonomy.tag %}
+        <div class="tags">
+        <h3>Tags</h3>
+            <ul>
+            {% for tag in page.taxonomy.tag %}
+            <li><a class="tag" href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </header>
+
+    <div class="blog-content">
+        {{ page.summary }}
+        <p><a class="read-more" href="{{ page.url }}">Read more</a></p>
+    </div>
+</article>

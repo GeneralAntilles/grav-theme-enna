@@ -1,0 +1,15 @@
+{
+   "project":"grav-theme-enna",
+   "platforms":{
+      "grav":{
+         "nodes":{
+            "theme":[
+               {
+                  "source":"/",
+                  "destination":"/user/themes/enna"
+               }
+            ]
+         }
+      }
+   }
+}

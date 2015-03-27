@@ -1,0 +1,216 @@
+a {
+    color: $primary_0;
+}
+
+a:visited {
+    color: $complement_0;
+}
+
+a:hover {
+    color: $secondary_0;
+}
+
+a:active {
+    color: $secondary_plus2;
+}
+
+abbr {
+    border-bottom: 1px dotted silver;
+}
+
+body {
+    font-family: $text_font, sans-serif;
+    background-color: $bg_color;
+    color: $text_color;
+    min-width: 30em;
+    padding: 0.5ex;
+    text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: left;
+    margin: 0;
+    //padding: 0.4em 0 0.1em 0;
+    font-family: $heading_font, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    a {
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    a:hover {
+        transition: color 0.3s ease;
+    }
+}
+
+h1 {
+    font-size: 2.75em;
+    line-height: 1.25em
+}
+
+h2 {
+    font-size: 2em;
+    line-height: 1.25em;
+}
+
+h3 {
+    font-size: 1.50em;
+    line-height: 1.25em;
+}
+
+h4 {
+    font-size: 1.125em;
+    line-height: 1.25em;
+}
+
+h5 {
+    font-size: 1em;
+    line-height: 1.25em;
+}
+
+h6 {
+    font-size: 1em;
+    line-height: 1.25em;
+}
+
+h1, h1 a, h1 a:visited {
+    color: $h1_color;
+}
+
+h2, h2 a, h2 a:visited {
+    color: $h2_color;
+}
+
+h3, h3 a, h3 a:visited,
+h4, h4 a, h4 a:visited,
+h5, h5 a, h5 a:visited,
+h6, h6 a, h6 a:visited {
+    color: $text_color;
+}
+
+h1 a:hover {
+    color: lighten($h1_color, 10);
+}
+
+h2 a:hover {
+    color: lighten($h2_color, 10);
+}
+
+h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+    color: lighten($text_color, 15);
+}
+
+h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+    color: $h_active;
+}
+
+hr {
+    color: $text_color;
+    border: none;
+    clear: both;
+}
+
+hr:after {
+    content: "⁂";
+    display: block;
+    width: 5em;
+    padding-top: 0.5ex;
+    margin: auto;
+    position: relative;
+    top: -1.5ex;
+}
+
+p {
+    line-height: 1.5;
+}
+
+table {
+    text-align: left;
+    font-size: 90%;
+    background: white;
+    margin: 1ex auto;
+    border-collapse: collapse;
+    width: 100%;
+    //border: 1px solid $bg_color;
+    margin: 30px 0;
+}
+
+th {
+    font-size: 100%;
+    color: $text_color;
+    padding: 0.5em 0.8em;
+    border-bottom: 2px solid silver;
+    font-weight: bold;
+    background: $color_alabaster_approx;
+    padding: 5px;
+}
+
+td {
+    border-bottom: 1px solid $bg_color;
+    color: $text_color;
+    padding: 0.5em 0.8em;
+    padding: 5px;
+    //border: 1px solid $bg_color;
+}
+
+tbody tr:hover td {
+    color: $primary_plus1;
+    background-color: $color_gallery_approx;
+}
+
+blockquote {
+    padding: 0 0 0 20px !important;
+    font-size: 16px;
+    color: $text_color;
+    > blockquote > blockquote {
+        margin: 0;
+        p {
+            padding: 15px;
+            display: block;
+            margin-top: 0;
+            margin-bottom: 0;
+            border: 1px solid $color_gallery_approx;
+        }
+        > {
+            p {
+                margin-left: -75px;
+                color: $color_pesto_approx;
+                background-color: $color_solitaire_approx;
+                border-color: $color_champagne_approx;
+            }
+            blockquote > {
+                p {
+                    margin-left: -100px;
+                    color: $color_apple_blossom_approx;
+                    background-color: $color_vanilla_ice_approx;
+                    border-color: $color_oyster_pink_approx;
+                }
+                blockquote > {
+                    p {
+                        margin-left: -125px;
+                        color: $color_calypso_approx;
+                        background-color: $color_link_water_approx;
+                        border-color: $color_charlotte_approx;
+                    }
+                    blockquote > p {
+                        margin-left: -150px;
+                        color: $color_killarney_approx;
+                        background-color: $color_willow_brook_approx;
+                        border-color: $color_beryl_green_approx;
+                    }
+                }
+            }
+        }
+    }
+}

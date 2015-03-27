@@ -1,0 +1,12 @@
+@media screen and(-webkit-min-device-pixel-ratio:0) {
+	#header .brand {
+		margin-bottom: 0.5ex;
+	}
+	.blog-content, .project-item {
+		p:first-of-type:first-letter {
+			margin: 0.12ex 0.05ex 0 0;
+			padding: 0;
+			line-height: 0.8;
+		}
+	}
+}

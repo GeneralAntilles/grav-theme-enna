@@ -1,0 +1,44 @@
+.width-100 {
+    width: 100%;
+}
+
+.home {
+    background: url("../images/background-home.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 35em;
+    h1 {
+        font-weight: 100;
+        text-align: left;
+        font-family: "Slate Pro", "Helvetica Neue", "Helvetica", sans-serif;
+        background: linear-gradient(to right, rgba(40, 40, 40, 1), rgba(40, 40, 40, 0.03), rgba(0, 0, 0, 0));
+        margin: 1ex 0;
+        padding: 0.5ex 0 0.5ex 1ex;
+        text-shadow: 1px 1px 1px black,
+                     1px 1px 2px black;
+        color: white;
+        &:nth-of-type(1) {
+            text-align: left;
+        }
+        &:nth-of-type(3) {
+            background: linear-gradient(to right, rgba(40, 40, 40, 1), rgba(40, 40, 40, 0.08), rgba(0, 0, 0, 0));
+        }
+    }
+    @include breakpoint(small) {
+        background-image: url("../images/background-home@0.5x.jpg");
+    }
+    @include breakpoint(medium) {
+        background-image: url("../images/background-home.jpg");
+    }
+    @include breakpoint(large) {
+        background-image: url("../images/background-home@2x.jpg");
+    }
+    @include retina1-5x {
+        background-image: url("../images/background-home@2x.jpg");
+    }
+    @include retina2x {
+        background-image: url("../images/background-home@2x.jpg");
+    }
+    @include retina3x {
+        background-image: url("../images/background-home@3x.jpg");
+    }
+}

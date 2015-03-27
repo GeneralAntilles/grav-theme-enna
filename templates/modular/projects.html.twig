@@ -1,0 +1,28 @@
+{% for project in page.header.projects %}
+<article class="project-item">
+    <header>
+        <h2 class="project-title">{{ project.title }}</h2>
+
+        {% if project.taxonomy.tag %}
+        <div class="tags">
+            <h3>Tags</h3>
+            {% for tag in project.taxonomy.tag %}
+            <li><a class="tag" href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if project.links %}
+        <div class="project-links">
+            {% for link in project.links %}
+                <a href="{{ link.link }}">{% if link.icon %}<i class="fa {{ link.icon }}"></i>{% else %}{{ link.host }}{% endif %}</a>
+            {% endfor %}
+        </div>
+    {% endif %}
+    </header>
+
+    <p class="project-description">
+        {{ project.description }}
+    </p>
+</article>
+{% endfor %}

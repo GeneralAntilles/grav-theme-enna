@@ -1,0 +1,126 @@
+@mixin pacifico-brand {
+    #header {
+        .brand {
+            margin: 0.5ex 0 1ex 0;
+
+            padding: 0 0.5em 0 0;
+
+            text-align: right;
+            text-shadow: 0 1px 0 $brand_shadow_7,
+                         1px 2px 0 $brand_shadow_6,
+                         1px 3px 0 $brand_shadow_5,
+                         2px 4px 0 $brand_shadow_4, 
+                         2px 5px 0 $brand_shadow_3,
+                         3px 6px 0 $brand_shadow_2,
+                         3px 7px 0 $brand_shadow_1,
+                         4px 8px 0 $brand_shadow_0,
+                         5px 9px 7px $brand_shadow_shadow;
+
+            font-family: $logo_font, serif;
+            font-size: 400%;
+            font-weight: 400;
+            a, a:visited, a:hover, a:active {
+                color: $brand_color;
+                text-decoration: none;
+            }
+        }
+    }
+    nav {
+        margin-top: 0ex;
+    }
+}
+
+@mixin merriweather-brand {
+    #header {
+        .brand {
+            margin: 0;
+
+            padding: 0.1em 1em;
+
+            text-align: center;
+            text-shadow: 2px 2px 2px #111;
+
+            font-family: "Merriweather", serif;
+            font-size: 400%;
+            font-weight: 100;
+            a, a:visited, a:hover, a:active {
+                color: $brand_color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@mixin test-brand {
+    #header {
+        .brand {
+            position: relative;
+            z-index: 3;
+
+            float: right;
+
+            margin: 0;
+
+            padding: 0.2em 1em 0 0;
+
+            text-align: center;
+            text-shadow: 1px 1px 3px #151515;
+            
+            font-family: "Merriweather", serif;
+            font-size: 200%;
+            font-weight: 100;
+            a, a:visited, a:hover, a:active {
+                color: $brand_color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@mixin breakpoint($point) {
+    @if $point == small {
+        @media only screen and (max-width: $small) { @content; }
+    }
+    @else if $point == medium {
+        @media only screen and (min-width: $medium) { @content; }
+    }
+    @else if $point == large {
+        @media only screen and (min-width: $large) { @content; }
+    }
+}
+
+@mixin retina1-5x {
+    @media
+        only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (min--moz-device-pixel-ratio: 1.5),
+        only screen and (-o-min-device-pixel-ratio: 1.5/1),
+        only screen and (min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 142dpi),
+        only screen and (min-resolution: 1.5dppx) {
+        @content;
+    }
+}
+
+@mixin retina2x {
+    @media
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+        @content;
+    }
+}
+
+@mixin retina3x {
+    @media
+        only screen and (-webkit-min-device-pixel-ratio: 3),
+        only screen and (min--moz-device-pixel-ratio: 3),
+        only screen and (-o-min-device-pixel-ratio: 3/1),
+        only screen and (min-device-pixel-ratio: 3),
+        only screen and (min-resolution: 288dpi),
+        only screen and (min-resolution: 3dppx) {
+        @content;
+    }
+}

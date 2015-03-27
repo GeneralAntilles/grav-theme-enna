@@ -1,0 +1,80 @@
+/* Colors */
+$color_gallery_approx: #eee;
+$color_cerulean_approx: #009dde;
+$color_curious_blue_approx: #21a2df;
+$color_ultramarine_approx: #009;
+$color_celeste_approx: #ccc;
+$color_bon_jour_approx: #dfdfdf;
+$color_alabaster_approx: #f9f9f9;
+$color_pesto_approx: #8a6d3b;
+$color_solitaire_approx: #fcf8e3;
+$color_champagne_approx: #faebcc;
+$color_apple_blossom_approx: #a94442;
+$color_vanilla_ice_approx: #f2dede;
+$color_oyster_pink_approx: #ebccd1;
+$color_calypso_approx: #31708f;
+$color_link_water_approx: #d9edf7;
+$color_charlotte_approx: #bce8f1;
+$color_killarney_approx: #3c763d;
+$color_willow_brook_approx: #dff0d8;
+$color_beryl_green_approx: #d6e9c6;
+
+$bg_color: #151515;
+$bg_color_alt: #252525;
+$text_color: #ccc;
+$wrapper_color: #333;
+
+/* Main Primary color (dark cerulean) */
+$primary_minus2: #078CDB;
+$primary_minus1: #026AA8;
+$primary_0: #025789;
+$primary_plus1: #01466F;
+$primary_plus2: #013452;
+
+/* Dark blue color */
+$blue_minus2: #1221E1;
+$blue_minus1: #0714B5;
+$blue-0: #040F95;
+$blue_plus1: #030B78;
+$blue_plus2: #020859;
+
+/* Main Secondary color (light green) */
+$secondary_minus2: #00E26F;
+$secondary_minus1: #00B75A;
+$secondary_0: #00974A;
+$secondary_plus1: #007A3C;
+$secondary_plus2: #005A2C;
+
+/* Main Complement color (bright orange) */
+$complement_minus1: #FF8C00;
+$complement_0: #D77600;
+$complement_plus1: #AE6000;
+$complement_plus2: #804700;
+
+/* Brand shadow */
+$brand_color: $primary_0;
+$brand_shadow_7: darken($text_color, 0);
+$brand_shadow_6: darken($text_color, 8);
+$brand_shadow_5: darken($text_color, 16);
+$brand_shadow_4: darken($text_color, 24);
+$brand_shadow_3: darken($text_color, 32);
+$brand_shadow_2: darken($text_color, 42);
+$brand_shadow_1: darken($text_color, 54);
+$brand_shadow_0: darken($text_color, 68);
+$brand_shadow_shadow: #010101;
+
+/* Headings */
+$h1_color: $primary_minus2;
+$h2_color: $primary_minus1;
+$h_active: $secondary_0;
+
+/* Nav */
+$nav_hover_color: lighten($text_color, 10);
+$active_nav_border: lighten($primary_0, 6);
+
+/* Borders */
+$minor_border_color: gray;
+
+/* Shadows */
+$shadow_color: #111;
+$header_footer_shadow: 0 0 5px gray;

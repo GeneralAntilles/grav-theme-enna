@@ -1,0 +1,18 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set collection = parent.collection() %}
+
+{% block sidebar %}
+<div class="sidebar">
+	<h3>Recent posts</h3>
+	<ul class="blog-post-list">
+		{% for child in collection %}
+		{% include 'partials/blog_list_item.html.twig' with {'page':child} %}
+		{% endfor %}
+	</ul>
+</div>
+{% endblock sidebar %}
+
+{% block content %}
+    {% include 'partials/blog_item.html.twig' %}
+{% endblock content %}

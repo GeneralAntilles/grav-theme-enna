@@ -1,0 +1,21 @@
+.project-item {
+    @extend .blog-content;
+    @extend .blog-post;
+    &:after {
+        content: "";
+    }
+}
+
+.project-title {
+    @extend .blog-title;
+    padding-top: 1ex;
+}
+
+.project-links {
+    float: left;
+    font-size: 1.7em;
+}
+
+.project-description {
+    clear: both;
+}

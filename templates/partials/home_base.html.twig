@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'partials/head.html.twig' %}
+
+    <body>
+        <div id="wrapper">
+            {# include the header with navigation #}
+            {% include 'partials/header.html.twig' %}
+
+            {% block content %}{% endblock %}
+
+            {# include the footer #}
+            {% include 'partials/footer.html.twig' %}
+        </div>
+
+        <script type="text/javascript">
+            // media query event handler
+           (function () {
+                if (window.matchMedia) {
+                    var width400 = window.matchMedia( "(min-width: 400px) and (max-width: 999px)" );
+                    var width1000 = window.matchMedia( "(min-width: 1000px) and (max-width: 1499px)" );
+                    var width1500 = window.matchMedia( "(min-width: 1500px)" );
+
+                    width400.addListener(widthChange);
+                    width1000.addListener(widthChange);
+                    width1500.addListener(widthChange);
+                }
+
+                // media query change
+                function widthChange( mediaQueryList ) {
+                    if ( width400.matches ) {
+                        $('main').flowtype = function() { return false; };
+                        $('body').flowtype({ minimum: 250, maximum: 1000, minFont: 14, fontRatio: 49 });
+                    }
+
+                    if ( width1000.matches ) {
+                        // window width is at least 1001px
+                        $('main').flowtype({ minimum: 651, maximum: 1500, minFont: 14, fontRatio: 48 });
+                    }
+
+                    if ( width1500.matches ) {
+                        // window width is at least 1500px
+                        $('main').flowtype({ minimum: 950, maximum: 2000, minFont: 14, fontRatio: 48 });
+                    }
+                }
+
+                function initialTypography ( mediaQueryList ) {
+                    if ( width400.matches ) {
+                        $('main').flowtype = function() { return false; };
+                        $('body').flowtype({ minimum: 250, maximum: 1000, minFont: 14, fontRatio: 49 });
+                    }
+
+                    if ( width1000.matches ) {
+                        // window width is at least 1001px
+                        $('body').flowtype({ minimum: 250, maximum: 1000, minFont: 14, fontRatio: 49 });
+                        $('main').flowtype({ minimum: 651, maximum: 1500, minFont: 14, fontRatio: 48 });
+                    }
+
+                    if ( width1500.matches ) {
+                        // window width is at least 1500px
+                        $('body').flowtype({ minimum: 250, maximum: 1000, minFont: 14, fontRatio: 49 });
+                        $('main').flowtype({ minimum: 950, maximum: 2000, minFont: 14, fontRatio: 48 });
+                    }
+                }
+
+                window.addEventListener("DOMContentLoaded", initialTypography(), false);
+            })();
+        </script>
+    </body>
+</html>

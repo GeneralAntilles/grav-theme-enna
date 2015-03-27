@@ -1,0 +1,21 @@
+#footer {
+    position: relative;
+    z-index: 2;
+
+    clear: both;
+
+    border-top: $major_border;
+
+    background-color: $bg_color_alt;
+
+    padding: 1ex;
+
+    text-align: center;
+    color: $text_color;
+
+    font-family: $small_font, sans-serif;
+    font-style: italic;
+    font-size: 70%;
+
+    box-shadow: $header_footer_shadow;
+}

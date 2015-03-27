@@ -1,0 +1,6 @@
+{{ page.content }}
+<ul class="social-networks">
+{% for socialnetwork in page.header.socialnetworks %}
+    <li><a class="exclude" href="{{ socialnetwork.url }}">{% if socialnetwork.icon %}<i class="fa {{ socialnetwork.icon }}"></i>{% else %}{{ socialnetwork.network }}{% endif %}</a></li>
+{% endfor %}
+</ul>

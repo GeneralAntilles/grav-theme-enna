@@ -1,0 +1,15 @@
+<header id="header">
+    <h1 class="brand"><a href="/">{{ site.title }}&nbsp;</a></h1>
+</header>
+
+<nav id="nav" role="navigation">
+	<h2>Navigation</h2>
+    <ul>
+        {% for page in pages.children %}
+        {% if page.visible %}
+        {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+        <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}{% if page.header.tagline %}<span>{{ page.header.tagline }}</span>{% endif %}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>

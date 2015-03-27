@@ -1,0 +1,31 @@
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 1440px),
+only screen and (min-device-pixel-ratio: 2) and (max-device-width: 1440px) {
+    .home {
+        background-image: url("/user/images/ryan-desk-laptop@2x.jpg");
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.625em;
+        line-height: 1.15384615em;
+    }
+    h3 {
+        font-size: 1.375em;
+        line-height: 1.13636364em;
+    }
+    h4 {
+        font-size: 1.125em;
+        line-height: 1.11111111em;
+    }
+}
+
+@media
+only screen and (min-device-pixel-ratio: 3),
+only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .home {
+        background: url("/images/ryan-desk-laptop@3x.jpg") no-repeat center center;
+        background-size: cover;
+    }
+}

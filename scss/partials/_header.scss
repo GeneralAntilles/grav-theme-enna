@@ -1,0 +1,42 @@
+@include pacifico-brand;
+
+#header {
+    padding: 0;
+    .brand {
+        position: relative;
+        z-index: 3;
+    }
+
+    @include breakpoint(medium) {
+        float: left;
+
+        width: 300px;
+        .brand {
+            margin: 0 0 0 0;
+
+            padding: 0 0 0 1.1em;
+
+            width: 2.75em;
+
+            line-height: 1.3;
+            text-indent: -0.75em;
+            text-align: left;
+        }
+    }
+    @include breakpoint(large) {
+        float: left;
+
+        width: 500px;
+        .brand {
+            margin: 0 0 0 0.25em;
+
+            padding: 0;
+
+            width: 5.25em;
+
+            line-height: 1.3;
+            text-align: center;
+            text-indent: -0.5em;
+        }
+    }
+}
